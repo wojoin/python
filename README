@@ -1,0 +1,47 @@
+                        / Flaskr /
+
+                 a minimal blog application
+
+
+    ~ What is Flaskr?
+
+      A sqlite powered thumble blog application
+
+    ~ How do I use it?
+
+      1. edit the configuration in the flaskr.py file or
+         export an FLASKR_SETTINGS environment variable
+         pointing to a configuration file.
+
+      2. install the app from the root of the project directory
+
+         pip install --editable .
+
+      3. Instruct flask to use the right application
+
+         export FLASK_APP=flaskr
+
+      4. initialize the database with this command:
+
+         flask initdb
+
+      5. now you can run flaskr:
+
+         flask run
+
+         the application will greet you on
+         http://localhost:5000/
+
+    ~ Is it tested?
+
+      You betcha.  Run `python setup.py test` to see
+      the tests pass.
+
+      # successful
+      0.转到flaskr项目所在目录
+      1.set FLASK_APP=flaskr  set FLASK_DEBUG=1
+      2.python -m flask initdb -- 把scheme.sql脚本中的drop语句删除后就无法执行initdb了，此时这个步骤可以跳过去
+      3.python -m flask run
+
+      Note:
+      在Windows下要使用python -m flask run这个命令来运行该程序，如果直接用flask run运行的话，会报错can't open file
